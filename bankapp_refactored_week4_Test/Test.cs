@@ -124,18 +124,15 @@ namespace bankapp_refactored_week4_Test
         }
 
         // TEST FOR TRANSACTION
-        /*[Test]
+        [Test]
         public void TransactionTest()
         {
-            //Arrange
-            var randomCust = new Customer("tom", "riddle", "tom@riddle.com", "tom", "marvolo");
-            var randomAcc = new BankAccount(randomCust, "savings", 72000);
-            var randomCust2 = new Customer("mason", "greenwood", "mason@manutd.com", "mason", "greenwood");
-            var randomAcc2 = new BankAccount(randomCust2, "current", 95000000);
             //Act
-            randomAcc2.TransferTo(randomAcc.AccNumber, 1000000, DateTime.Now, "gift");
+            var prevTxnCount = Bank.allTransactions.Count;
+            var txn = new Transaction(1000, DateTime.Now, "test txn");
+            var currentTxnCount = Bank.allTransactions.Count;
             //Assert
-            Assert.That(randomAcc.Balance, Is.EqualTo(1072000));
+            Assert.That(currentTxnCount, Is.EqualTo(prevTxnCount+1));
         }
-    }*/
+    }
 }

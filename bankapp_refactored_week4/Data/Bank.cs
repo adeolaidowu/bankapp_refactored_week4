@@ -7,8 +7,8 @@ namespace bankapp_refactored_week4.Data
 {
     public class Bank
     {
-        //protected string bankName;
         public static List<Customer> allCustomers = new List<Customer>();
+        public static List<Transaction> allTransactions = new List<Transaction>();
 
         // register new customer
         public static Customer Register(string fname, string lname, string email, string username, string password)

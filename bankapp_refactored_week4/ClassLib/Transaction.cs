@@ -1,10 +1,11 @@
-﻿using System;
+﻿using bankapp_refactored_week4.Data;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace bankapp_refactored_week4.ClassLib
 {
-    class Transaction
+   public class Transaction
     {
         public decimal Amount { get; }
         public DateTime Date { get; }
@@ -15,6 +16,7 @@ namespace bankapp_refactored_week4.ClassLib
             Amount = amount;
             Date = date;
             Note = note;
+            Bank.allTransactions.Add(this);
         }
     }
 }
