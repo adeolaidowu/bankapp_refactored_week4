@@ -7,14 +7,15 @@ namespace bankapp_refactored_week4_Test
 {
     [TestFixture]
     public class Test
+
     {
         [Test]
         public void CheckLoginValid()
         {
             // Arrange
-            Customer newCust = new Customer("zaraki","kenpachi","zaraki@email.com","zaraki","nozarashi");
+            Customer newCust = new Customer("harvey", "specter", "h@specter.com", "harvey", "hardman");
             // Act
-            newCust.LogIn("zaraki", "nozarashi");
+            newCust.LogIn("harvey", "hardman");
             //Assert
             Assert.That(newCust.IsLoggedIn, Is.EqualTo(true));
         }
@@ -23,9 +24,9 @@ namespace bankapp_refactored_week4_Test
         public void CheckLoginInvalid()
         {
             // Arrange
-            Customer newCust = new Customer("zaraki", "kenpachi", "zaraki@email.com", "zaraki", "nozarashi");
+            Customer newCust = new Customer("harvey", "specter", "h@specter.com", "harvey", "hardman");
             // Act
-            newCust.LogIn("zaraki", "kenpachi");
+            newCust.LogIn("harvey", "pearson");
             //Assert
             Assert.That(newCust.IsLoggedIn, Is.EqualTo(false));
         }
