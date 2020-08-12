@@ -26,7 +26,7 @@ namespace bankapp_refactored_week4_Test
             // Arrange
             Customer newCust = new Customer("harvey", "specter", "h@specter.com", "harvey", "hardman");
             // Act
-            newCust.LogIn("harvey", "pearson");
+            newCust.LogIn("harvey", "ross");
             //Assert
             Assert.That(newCust.IsLoggedIn, Is.EqualTo(false));
         }
